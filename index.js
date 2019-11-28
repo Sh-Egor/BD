@@ -39,8 +39,28 @@ app.get('/getMData', (req,res) => {
     LEFT JOIN ports AS portsOut ON voyage.out_port = portsOut.id 
     LEFT JOIN ports AS portsIn ON voyage.in_port = portsIn.id
     WHERE voyage.out_time > "20.11.19" AND voyage.in_time < "23.11.19"; `, (error, result)=>{
-        console.log(result);
         res.json(result);
     });
 
+});
+
+app.get('/getSData', (req,res) =>{
+    connect.query(`
+    SELECT staff.surname, staff.name, staff.patronymic, staff.post, staff.expirience FROM
+    ship LEFT JOIN crew ON ship.crew_id = crew.id
+    LEFT JOIN crew_to_staff ON crew.id = crew_to_staff.crew_id
+    LEFT JOIN staff ON crew_to_staff.man_id = staff.id;`, (error,result) =>{
+        res.json(result);
+    });
+});
+
+app.get('/getShData', (req,res) =>{
+    connect.query(
+    `
+    SELECT ship.brand, ship.name, ship.capacity FROM
+    ship LEFT JOIN companies ON ship.company_id = companies.id;
+    `, (error,result) =>{
+        console.log(result);
+        res.json(result);
+    });
 });
