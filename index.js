@@ -60,7 +60,6 @@ app.get('/getShData', (req,res) =>{
     SELECT ship.brand, ship.name, ship.capacity FROM
     ship LEFT JOIN companies ON ship.company_id = companies.id;
     `, (error,result) =>{
-        console.log(result);
         res.json(result);
     });
 });

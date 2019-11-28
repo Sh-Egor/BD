@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+    height: 51vw;
 }
 
 header {
@@ -16,7 +16,7 @@ header {
 }
 
 header h1 {
-    font-size: 35px;
+    font-size: calc(0.5em + 1.5vw);
 }
 
 #head_wrap {
@@ -26,37 +26,62 @@ header h1 {
 
 .search {
     display: block;
-    padding: 10px;
-    font-size: 70px;
-    border: 2px solid black;
-    /* width: 20%; */
+    padding: auto;
+    font-size: calc(0.5em + 1.5vw);
+    border: 3px solid black;
+    border-radius: 25px;
+    width: auto;
     text-align: center;
     margin: auto;
-    margin-top: 20vh;
+    margin-top: auto;
     cursor: pointer;
     /* transition: all .5s ease-in-out; */
 }
 
-.search:hover {
-    color: black;
-    transition: all .5s ease-in-out;
-}
 
 #block{
     display: inline-block;
-    width: 30%;
+    width: auto;
     /* transition: all .5s ease-in-out; */
-    padding: 23px;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 #block:hover{
-    color:white;
+    /* color:white; */
+    border :calc(0.05em + 0.5vw) solid black;
+    border-radius: 25px;
     border-color: white;
     transition: all .5s ease-in-out
 }
 #block:hover .search{
-    border-color: white;
-    /* transition: all .5s ease-in-out */
+    border-color: rgb(17, 117, 163);
+    background-color: rgb(26, 163, 226);
+    transition: all .5s ease-in-out;
 }
+
 #name{
     text-align: center;
+    font-size: calc(0.5em + 1vw);
+}
+
+#date{
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    font-size: calc(0.5em + 1vw);
+    margin-left: auto;
+    margin-right: auto;
+}
+#in{
+    font-size: calc(0.5em + 1.5vw);
+    display: inline;
+    text-align: center;
+    align-self: center;
+    margin-left: 10%;
+}
+#cnt{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }

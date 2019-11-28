@@ -16,14 +16,22 @@ header {
 }
 
 header h1 {
-    font-size: 35px;
+    font-size: calc(1em + 1vw);
 }
 
 #head_wrap {
     display: flex;
     align-items: center;
 }
+#cnt{
+    display: block;
+    font-size: calc(0.05em + 1vw);
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+}
 table {
+    /* display: list-item; */
     width: 100%; 
     border-collapse: separate; 
     border-spacing: 4px;

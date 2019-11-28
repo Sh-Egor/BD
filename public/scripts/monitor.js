@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function uploadData(data, placeForData) {
     hd = ``;
     data.then(anotherData=>{
-        hd = `<table>
+        hd = `<table id = "cnt">
             <thead>
                 <tr>
                     <td> Статус </td>
