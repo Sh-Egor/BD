@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     var placeForData = document.getElementById('monitorData');
-    fetch('/getMData').then(res =>{
-        if(res.ok){
-            data = res.json();
+    $.ajax({
+        url: '/monitor',
+        type: 'POST',
+        success: data =>{
             this.uploadData(data, placeForData);
             return data;
         }
-    }),
+    });
     document.getElementById('logo').addEventListener('click', () => {
         window.location.href = '/'
     });
@@ -14,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function uploadData(data, placeForData) {
     hd = ``;
-    data.then(anotherData=>{
+    console.log(data);
+    // data=>{
         hd = `<table id = "cnt">
             <thead>
                 <tr>
@@ -31,7 +33,7 @@ function uploadData(data, placeForData) {
                 </tr>
             </thead>
         <tbody>`;
-        anotherData.forEach(element => {
+        data.forEach(element => {
             var outdate = new Date(element.out_time);
             var indate = new Date(element.in_time);
             hd +=`   <tr>
@@ -51,9 +53,8 @@ function uploadData(data, placeForData) {
                                     <td>${element.brand}</td>
                                 </tr>`;
         });
-    }).then(data =>{
         hd += `</tbody>
                 </table>`
         placeForData.insertAdjacentHTML('afterend',hd);
-    });
+    // }
 }
