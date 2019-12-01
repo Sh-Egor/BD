@@ -1,6 +1,6 @@
 body {
     background-image: url(../media/background.png);
-    background-size: cover;
+    background-size: 200vh 130vh;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ header h1 {
     font-size: calc(0.5em + 1.5vw);
 }
 
-#head_wrap {
+.head_wrap {
     display: flex;
     align-items: center;
 }
@@ -46,6 +46,7 @@ header h1 {
     padding: auto;
     margin-left: auto;
     margin-right: auto;
+    /* transition: all .5s ease-in-out; */
 }
 #block:hover{
     /* color:white; */
@@ -65,7 +66,12 @@ header h1 {
     font-size: calc(0.5em + 1vw);
 }
 
-#date{
+#login:hover{
+    border-color: rgb(17, 117, 163);
+    background-color: rgb(26, 163, 226);
+    transition: all .5s ease-in-out;
+}
+.data{
     display: flex;
     text-align: center;
     cursor: pointer;
@@ -84,4 +90,36 @@ header h1 {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+}
+#logdiv{
+    display: inline-flex;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    /* justify-content: space-around; */
+}
+#mainlogo{
+    display: flex;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.data1{
+    display: flex;
+    text-align: center;
+    /* cursor: pointer; */
+    font-size: calc(0.5em + 1vw);
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+}
+.data1:focus{
+    outline: none;
+    border-color: rgb(255, 153, 0);
+    /* background-color: rgb(26, 163, 226); */
+}
+button:focus{
+    outline: none;
+    border-color: rgb(255, 153, 0);
 }

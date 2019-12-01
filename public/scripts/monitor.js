@@ -13,11 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('keydown',(function(event) {
+    if(event.code == 'Backspace' || event.code =='Escape'){
+        window.location.href = '/'
+    }
+}));
+
 function uploadData(data, placeForData) {
     hd = ``;
     console.log(data);
     // data=>{
-        hd = `<table id = "cnt">
+        hd = `<table>
             <thead>
                 <tr>
                     <td> Статус </td>

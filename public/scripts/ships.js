@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('keydown',(function(event) {
+    if(event.code == 'Backspace' || event.code =='Escape'){
+        window.location.href = '/'
+    }
+}));
+
 function uploadData(data, placeForData) {
     hd = ``;
     data.then(anotherData=>{

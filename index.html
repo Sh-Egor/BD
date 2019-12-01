@@ -12,9 +12,14 @@
 
 <body>
     <header>
-        <div id="head_wrap">
+        <div class="head_wrap" id = "mainlogo">
             <img id="logo" style="width: 35px; height:35px; margin-right: 10px; cursor: pointer;" src="media/logo.png" alt="Логотип">
             <h1>Монитор</h1>
+        </div>
+        <div class = "head_wrap" id = "logdiv">
+            <input id = "one" class = "data1" type="login" placeholder="login">
+            <input id = "two" class = "data1" type="password" placeholder="password">
+            <button id="login" class = "search">Войти</button>
         </div>
     </header>
     <div id ="cnt">
@@ -22,35 +27,29 @@
             <h1 id = "name">Рейсы</h1>
             <span id = "in">
                 С
-                <input id = "date1" type = "date">
+                <input id = "date1" type = "date" class = "data">
             </span>
             <span id = "in">
                 По
-                <input id = "date2" type = "date">
+                <input id = "date2" type = "date" class = "data">
             </span>
-            <span id="monitor" class = "search">Открыть</span>
+            <button id="monitor" class = "search">Открыть</button>
         </div>
         <div id = "block">
             <h1 id = "name">Команда корабля</h1>
             <span id = "in">
-                    <select id = "date">
-                        <option>tstfasdfas1</option>
-                        <option>tstadfasdf2</option>
-                        <option>tstfasdaff3</option>
-                    </select>
+                    <div id = "data3" class = "data">
+                    </div>
             </span>
-            <span id="staff" class = "search">Открыть</span>
+            <button id="staff" class = "search">Открыть</button>
         </div>
         <div id = "block">
             <h1 id = "name">Корабли компании</h1>
             <span id = "in">
-                    <select id = "date">
-                        <option>tstfasdfas1</option>
-                        <option>tstadfasdf2</option>
-                        <option>tstfasdaff3</option>
-                    </select>
+                    <div id = "data4" class = "data">
+                    </div>
             </span>
-            <span id="ships" class = "search">Открыть</span>
+            <button id="ships" class = "search">Открыть</button>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
