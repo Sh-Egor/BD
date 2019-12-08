@@ -168,6 +168,7 @@ app.get('/insertData', (req,res) =>{
         }
         ress += `'${req.query.values[req.query.values.length-1]}'`;
         hd += `INSERT INTO ${req.query.table}(${req.query.column}) VALUES (${ress});`;
+        console.log(hd);
         connect.query(hd, (error,result) =>{
             res.json({'answer':'Success'});
             });
